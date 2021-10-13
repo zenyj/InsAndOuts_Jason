@@ -1,6 +1,9 @@
 PImage[] fries = new PImage[5];
+
 String[] Names = {"1. Cut the Potato", "2. Fries", "3. A Plate", "4.  Bottle Of Ketchup", " 5. BOOM FRIES WITH tiny bit of ketchup!" };
+
 boolean process = true;
+
 int order =0;
 
 
@@ -21,6 +24,7 @@ for(int x = 0; x < fries.length; x++)
       fries[x].resize(300,0);
    }
 }
+
 
 
 void draw()
@@ -66,15 +70,5 @@ void Cycle(boolean process)
            order++; 
         }
     }
-    else
-    {
-       if(order == 0)
-       {
-           order = fries.length-1;
-       }
-       else
-       {
-          order--; 
-       }
-    }
+   
 }
