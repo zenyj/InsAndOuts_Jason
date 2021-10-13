@@ -1,6 +1,8 @@
+// Potato , fries by Jason
 PImage potato;
 PImage fries;
 PImage plate;
+PImage ketchup;
 
 int currentTime=0; 
 int timer=1100;
@@ -19,6 +21,7 @@ void setup () {
   potato = loadImage("potato.png");
   fries = loadImage("french.png");
   plate =loadImage("plate.png");
+  ketchup =loadImage("ketchup.png");
   
 }
 void draw() {
@@ -95,12 +98,18 @@ void draw() {
     fries.resize(250, 0);
     image(fries , width/2 , height/2 +100);
     
-  }
+    //ketchup only appears after fries is on the plate
+    if(mousePressed ==true) {
+    ketchup.resize(150, 0);
+    image(ketchup , width/2 +40 , 250);
+  }else{
+    
+}
 
+  
 }
   
-  
-
+}
 
   
   
