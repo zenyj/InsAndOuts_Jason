@@ -1,6 +1,6 @@
 PImage[] fries = new PImage[5];
 
-String[] name = {"1. Cut the Potato", "2. Fries", "3. A Plate", "4.  Bottle Of Ketchup", " 5. BOOM FRIES WITH tiny bit of ketchup!" };
+String[] name = {"1. Cut the Potato", "2. Fries", "3. A Plate", "4.  Bottle Of Ketchup", " 5. Fries with tiny bit of ketchup!" };
 
 boolean process = true;
 
