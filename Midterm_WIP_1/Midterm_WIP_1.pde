@@ -38,10 +38,7 @@ void draw(){
   
   
   
-  
-
-
-
+ 
 void startGame(){
   background(0);
   text("Press 'ENTER' to start the game", width/2, height/2 -50);
@@ -127,6 +124,7 @@ void game2(){
 }
 }
 
+
 void game3(){
   background(225,255,0);
   text("Press 1 or 2", width/2, height/2-250);
@@ -175,6 +173,7 @@ void gameOver(){
 }
 }
 
+
 void gameWon(){
   
   background(255, 192, 203);
@@ -183,6 +182,7 @@ void gameWon(){
    if (keyPressed && key == BACKSPACE){
       preGame=true;
       gameEnd = false;
+      gameFinish = false;
 }
 }
   
