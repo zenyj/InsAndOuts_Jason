@@ -8,6 +8,12 @@ void setup(){
   size (1600,1100);
   textAlign(CENTER);
   
+    for(int x = 0; x < math.length; x++)
+   {
+      math[x] = loadImage("math" + x + ".png");
+      math[x].resize(220,0);
+   }
+   
   
 }
 
@@ -17,44 +23,39 @@ void draw(){
   if(preGame==true){
       startGame();
     }
-  if(gameOne==true){
+  else if(gameOne==true){
       game1();
     }
-  if(gameTwo==true){
+  else if(gameTwo==true){
       game2();
    }
-  if(gameThree==true){
+  else if(gameThree==true){
        game3();
    }
-   if(gameFour==true){
+   else if(gameFour==true){
        game4();
    }
-    if(gameFive==true){
+    else if(gameFive==true){
        game5();
    }
-   if(gameSix==true){
+   else if(gameSix==true){
        game6();
    }
-   if(gameSeven==true){
+   else if(gameSeven==true){
        game7();
    }
-   if(gameFinish==true){
+   else if(gameFinish==true){
        gameWon();
    }
-  if(gameEnd==true){
+  else if(gameEnd==true){
       gameOver();
     }
 
-    
-  
-  for(int x = 0; x < math.length; x++)
-   {
-      math[x] = loadImage("math" + x + ".png");
-      math[x].resize(220,0);
-   }
-   
+}   
+ 
 
-}
+
+
   
   
  
@@ -65,7 +66,7 @@ void startGame(){
   textSize(25);
   
   text("Press 'ENTER' to start the game", width/2, height/2 );
-  textSize(60);
+  textSize(50);
   
   if(key == ENTER){
   
@@ -149,36 +150,36 @@ void game2(){
   text("Press the right number to advance to the next question!", width/2, height/2-400);
   textSize(50);
   
-  text("What is the value of w in teh equation 116 - w=95?", width/2 , height/2 -250);
+  text("What is the value of w in the equation 116 - w=95?", width/2 , height/2 -250);
   textSize(50);
   
   
-  text("1", width/2 -200, height/2 -50);
+  text("1", width/2 -200, height/2 -100);
   textSize(50);
   
-  text("2", width/2 +200, height/2 -50);
+  text("2", width/2 +200, height/2 -100);
   textSize(50);
   
-  text("3", width/2 -200, height/2 +250);
+  text("3", width/2 -200, height/2 +200);
   textSize(50);
   
-  text("4", width/2 +200, height/2 +250);
-  textSize(50);
-  
-  
-  
-  
-  text("w = 19", width/2 -200, height/2 + 50);
-  textSize(50);
-  
-  text("w = 21", width/2 +200, height/2 +50);
+  text("4", width/2 +200, height/2 +200);
   textSize(50);
   
   
-   text("w = 210", width/2 -200, height/2 + 350);
+  
+  
+  text("w = 19", width/2 -200, height/2 );
   textSize(50);
   
-  text("w = 20", width/2 +200, height/2 +350);
+  text("w = 21", width/2 +200, height/2 );
+  textSize(50);
+  
+  
+   text("w = 210", width/2 -200, height/2 + 300);
+  textSize(50);
+  
+  text("w = 20", width/2 +200, height/2 +300);
   textSize(50);
   
   
@@ -225,32 +226,32 @@ void game3(){
   textSize(50);
   
   
-  text("1", width/2 -200, height/2 -50);
+  text("1", width/2 -200, height/2 -100);
   textSize(50);
   
-  text("2", width/2 +200, height/2 -50);
+  text("2", width/2 +200, height/2 -100);
   textSize(50);
   
-  text("3", width/2 -200, height/2 +250);
+  text("3", width/2 -200, height/2 +200);
   textSize(50);
   
-  text("4", width/2 +200, height/2 +250);
-  textSize(50);
-  
-  
-  
-  
-  text("38", width/2 -200, height/2 + 50);
-  textSize(50);
-  
-  text("3.80", width/2 +200, height/2 +50);
+  text("4", width/2 +200, height/2 +200);
   textSize(50);
   
   
-   text("380", width/2 -200, height/2 + 350);
+  
+  
+  text("38", width/2 -200, height/2);
   textSize(50);
   
-  text("0.38", width/2 +200, height/2 +350);
+  text("3.80", width/2 +200, height/2);
+  textSize(50);
+  
+  
+   text("380", width/2 -200, height/2 + 300);
+  textSize(50);
+  
+  text("0.38", width/2 +200, height/2 +300);
   textSize(50);
   
   
