@@ -1,4 +1,3 @@
-//Are you
 
 PImage[] math = new PImage[17];
 boolean preGame = true;
