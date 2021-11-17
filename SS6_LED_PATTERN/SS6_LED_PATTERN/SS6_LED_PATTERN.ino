@@ -27,33 +27,69 @@ delay(10);
  
 // conditional statement
 
-   if(buttonState == HIGH){ // if button is pressed
-digitalWrite(LED1, HIGH);// send voltage to LED Pin
-delay(1000);
+if(buttonState == HIGH){ 
+digitalWrite(LED1, HIGH);
+delay(500);
+digitalWrite(LED1, LOW); 
+delay(500);
+digitalWrite(LED1, HIGH);
+delay(500);
+
 digitalWrite(LED2, HIGH);
-delay(1000);
+delay(500);
+digitalWrite(LED2, LOW);
+delay(500);
+digitalWrite(LED2, HIGH);
+delay(500);
+
+
 digitalWrite(LED3, HIGH);
-delay(1000);
+delay(500);
+digitalWrite(LED3, LOW); 
+delay(500);
+digitalWrite(LED3, HIGH);
+delay(500);
+
+
 digitalWrite(LED4, HIGH);
-delay(1000);
+delay(500);
+digitalWrite(LED4, LOW); 
+delay(500);
+digitalWrite(LED4, HIGH);
+delay(500);
+
+
 digitalWrite(LED5, HIGH);
-delay(1000);
+delay(500);
+digitalWrite(LED5, LOW);
+delay(500);
+digitalWrite(LED5, HIGH);
+delay(500);
+
+
 digitalWrite(LED6, HIGH);
-delay(1000);
+delay(500);
+digitalWrite(LED6, LOW); 
+delay(500);
+digitalWrite(LED6, HIGH);
+delay(500);
+
+
 
 }else {
   
 digitalWrite(LED1, LOW); // turn off voltage to led pin
-delay(1000);
+delay(500);
 digitalWrite(LED2, LOW);// send voltage to LED Pin
-delay(1000);
+delay(500);
 digitalWrite(LED3, LOW);
-delay(1000);
+delay(500);
 digitalWrite(LED4, LOW);
-delay(1000);
+delay(500);
 digitalWrite(LED5, LOW);
-delay(1000);
+delay(500);
 digitalWrite(LED6, LOW);
-delay(1000);
+delay(500);
+
 }        
 }
