@@ -1,6 +1,8 @@
 PFont impact;
 PFont gameover;
 PFont pricedown;
+import processing.sound.*;
+SoundFile file;
 
 boolean preGame = true;
 boolean gameOne,gameTwo,gameThree,gameFour,gameFive,gameSix,gameSeven,gameFinish,gameEnd= false;
@@ -58,7 +60,10 @@ void setup() {
   pic17 = loadImage("pic17.jpg");
   pic18 = loadImage("pic18.jpg");
   pic19 = loadImage("pic19.jpg");
+file = new SoundFile(this, "Jeopardy-theme-song.mp3");
+file.amp(0.3);
 
+  
   
 
   //set up Serial communication
@@ -139,6 +144,7 @@ void draw() {
   
     gameOne = true;
     preGame =false;
+    file.loop();
 }
 
 
@@ -148,8 +154,7 @@ void draw() {
 
 void game1(){
    myPort.write(0);
-   
-    
+  
   //bg
   background(pic1);
   
@@ -198,6 +203,7 @@ void game1(){
     gameEnd = true;
     gameOne = false;
      myPort.write(2);
+     file.stop();
     key='8';
   }
  if(keyPressed && key == '3')
@@ -205,6 +211,7 @@ void game1(){
     gameEnd = true;
     gameOne = false;
      myPort.write(2);
+     file.stop();
  
     key='8';
   }
@@ -213,6 +220,7 @@ void game1(){
     gameEnd = true;
     gameOne = false;
      myPort.write(2);
+     file.stop();
 
     key='8';
 }
@@ -262,6 +270,7 @@ void game2(){
     gameEnd = true;
     gameTwo = false;
      myPort.write(2);
+     file.stop();
  
     key='8';
   }
@@ -270,6 +279,7 @@ void game2(){
     gameEnd = true;
     gameTwo = false;
      myPort.write(2);
+     file.stop();
 
     key='8';
 }
@@ -280,6 +290,7 @@ void game2(){
     gameEnd = true;
     gameTwo = false;
      myPort.write(2);
+     file.stop();
  
     key='8';
   }
@@ -346,6 +357,7 @@ background(pic8);
   {
     gameEnd = true;
     gameThree = false;
+    file.stop();
      myPort.write(2);
     key='8';
 }
@@ -354,6 +366,7 @@ if(keyPressed && key == '3')
   {
     gameEnd = true;
     gameThree = false;
+   file.stop();
      myPort.write(2);
    
     key='8';
@@ -363,6 +376,7 @@ if(keyPressed && key == '4')
   {
     gameEnd = true;
     gameThree = false;
+    file.stop();
      myPort.write(2);
     key='8';
 }
@@ -413,6 +427,7 @@ background(pic13);
   {
     gameEnd = true;
     gameFour = false;
+    file.stop();
      myPort.write(2);
     key='8';
     
@@ -421,6 +436,7 @@ background(pic13);
   {
     gameEnd = true;
      gameFour  = false;
+     file.stop();
      myPort.write(2);
     key='8';
 }
@@ -437,6 +453,7 @@ if(keyPressed && key == '4')
   {
     gameEnd = true;
      gameFour  = false;
+     file.stop();
      myPort.write(2);
     key='8';
 }
@@ -488,6 +505,7 @@ void game5(){
     gameEnd = true;
     gameFive = false;
      myPort.write(2);
+     file.stop();
     key='8';
     
   }
@@ -504,6 +522,7 @@ if(keyPressed && key == '3')
     gameEnd = true;
     gameFive = false;
      myPort.write(2);
+     file.stop();
     key='8';
     
    
@@ -514,6 +533,7 @@ if(keyPressed && key == '4')
     gameEnd = true;
     gameFive = false;
      myPort.write(2);
+     file.stop();
     key='8';
     
     
@@ -567,6 +587,7 @@ void game6(){
     gameEnd = true;
     gameSix = false;
      myPort.write(2);
+     file.stop();
     key='8';
     
   }
@@ -583,6 +604,7 @@ if(keyPressed && key == '3')
     gameEnd = true;
     gameSix = false;
      myPort.write(2);
+     file.stop();
     key='8';
     
    
@@ -593,6 +615,7 @@ if(keyPressed && key == '4')
     gameEnd = true;
     gameSix = false;
      myPort.write(2);
+     file.stop();
     key='8';
     
 }
@@ -646,6 +669,7 @@ void game7(){
     gameFinish = true;
     key='8';
     myPort.write(3);
+    file.stop();
     
 
     
@@ -655,6 +679,7 @@ void game7(){
     gameEnd = true;
     gameSeven = false;
     myPort.write(2);
+    file.stop();
     key='8';
 }
 
@@ -663,6 +688,7 @@ if(keyPressed && key == '3')
     gameEnd = true;
     gameSeven = false;
     myPort.write(2);
+    file.stop();
     key='8';
 }
 
@@ -671,6 +697,7 @@ if(keyPressed && key == '4')
     gameEnd = true;
     gameSeven = false;
     myPort.write(2);
+    file.stop();
     key='8';
 }
 
