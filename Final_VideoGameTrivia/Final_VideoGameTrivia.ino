@@ -24,7 +24,7 @@ void setup() {
   pinMode(LED7, OUTPUT); // set pin as output
   pinMode(LED8, OUTPUT); // set pin as output
   pinMode(LED9, OUTPUT); // set pin as output
-
+                                                         
   
   pinMode(piezo, OUTPUT);
   Serial.begin(9600); // Start serial communication at 9600 bps
@@ -101,7 +101,7 @@ if (val == 4) {
 
 
 }
-
+//correct sound when you get answers correct
 void correct()
 {
 tone(piezo,100,400);
@@ -119,7 +119,7 @@ tone(piezo,600,100);
 }
 
 
-
+//incorrect sound when you get answers incorrect
 void incorrect()
 {
  
@@ -136,7 +136,7 @@ tone(piezo,200,550);
 delay(1000);
 
 }
-
+//victory sound when you win the game
 void victory(){
 tone(piezo,500,200);
 digitalWrite(LED1, LOW); 

@@ -1,11 +1,19 @@
+// Video Game Trivia by Jason Chang
+
+
+//Import Font
 PFont impact;
 PFont gameover;
 PFont pricedown;
+
+//import sound
 import processing.sound.*;
 SoundFile file;
 
+
 boolean preGame = true;
 boolean gameOne,gameTwo,gameThree,gameFour,gameFive,gameSix,gameSeven,gameFinish,gameEnd= false;
+
 PImage pic1;
 PImage pic2;
 PImage pic3;
@@ -60,8 +68,9 @@ void setup() {
   pic17 = loadImage("pic17.jpg");
   pic18 = loadImage("pic18.jpg");
   pic19 = loadImage("pic19.jpg");
+  
 file = new SoundFile(this, "Jeopardy-theme-song.mp3");
-file.amp(0.3);
+file.amp(0.6);
 
   
   
@@ -171,9 +180,10 @@ void game1(){
   fill(255);
   textFont(impact);
   
+  //title/question
   text("WHAT YEAR DID THE PLAYSTATION 5 RELEASE?" ,width/2 , height/2-340);
   
-  
+  //Title box
   fill(132, 107, 190);
   rect(width/2+ 250, height/2+150, 450, 75, 28);
   rect(width/2- 250, height/2+150, 450, 75, 28);
@@ -183,6 +193,7 @@ void game1(){
   fill(255);
   textSize(25);
   
+  //answers
   text("November 2020" ,width/2- 250, height/2+160);
   text("January 2021" ,width/2+ 250, height/2+160);
   text("November 2019" ,width/2- 250, height/2+285);
@@ -229,7 +240,6 @@ void game1(){
 void game2(){
  myPort.write(4);
  
-  //  println ("4");
   
   background(pic4);
   impact = createFont("Impact", 30);
